@@ -876,14 +876,12 @@ function CalculateFromLunarToSolar(event) {
   event.preventDefault();
   const lunarDate = document.getElementById("lunarDate").value;
 
-  const inputDate = new Date(lunarDate); // Esempio di input
+  const inputDate = new Date(lunarDate); 
 
-  const year = inputDate.getFullYear(); // Restituisce l'anno (ad esempio: 2023)
+  const year = inputDate.getFullYear(); 
 
-  // Ottenere il mese (da 0 a 11, 0 è gennaio e 11 è dicembre)
-  const month = inputDate.getMonth() + 1; // Aggiungi 1 perché i mesi partono da 0 (ad esempio: 8 per agosto)
+  const month = inputDate.getMonth() + 1; 
 
-  // Ottenere il giorno del mese
   const day = inputDate.getDate();
   console.log({
     year,
@@ -905,9 +903,10 @@ function CalculateFromLunarToSolar(event) {
   const dayOfWeek = dayNames[date.getDay()];
 
   // Crea la stringa nel formato richiesto
-  const dateString = `${calendarData.cYear}년 ${calendarData.cMonth} 월  ${calendarData.cDay}일 (${dayOfWeek})`;
+  let dateString = `${calendarData.cYear}년 ${calendarData.cMonth} 월  ${calendarData.cDay}일 (${dayOfWeek})`;
   console.log(calendarData);
-
-document.getElementById("result").innerHTML = dateString
-
+  if (calendarData === -1) {
+    dateString = "input not valid";
+  }
+  document.getElementById("result").innerHTML = dateString;
 }
