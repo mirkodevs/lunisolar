@@ -895,7 +895,7 @@ function CalculateFromLunarToSolar(event) {
 
   const date = new Date(
     calendarData.cYear,
-    calendarData.cMonth - 1,
+    calendarData.cMonth,
     calendarData.cDay
   );
 
@@ -905,6 +905,9 @@ function CalculateFromLunarToSolar(event) {
   const dayOfWeek = dayNames[date.getDay()];
 
   // Crea la stringa nel formato richiesto
-  const dateString = `${year}년 ${monthName} ${dayName}일(${dayOfWeek})`;
-  console.log(dateString);
+  const dateString = `${calendarData.cYear}년 ${calendarData.cMonth} 월  ${calendarData.cDay}일 (${dayOfWeek})`;
+  console.log(calendarData);
+
+document.getElementById("result").innerHTML = dateString
+
 }
