@@ -903,7 +903,7 @@ function CalculateFromLunarToSolar(event) {
   const dayOfWeek = dayNames[date.getDay()];
 
   // Crea la stringa nel formato richiesto
-  let dateString = `${calendarData.cYear}년 ${calendarData.cMonth} 월  ${calendarData.cDay}일 (${dayOfWeek})`;
+  let dateString = `양력 ${calendarData.cYear}년 ${calendarData.cMonth} 월  ${calendarData.cDay}일 (${dayOfWeek})`;
   console.log(calendarData);
   if (calendarData === -1) {
     dateString = "input not valid";
