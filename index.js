@@ -876,11 +876,11 @@ function CalculateFromLunarToSolar(event) {
   event.preventDefault();
   const lunarDate = document.getElementById("lunarDate").value;
 
-  const inputDate = new Date(lunarDate); 
+  const inputDate = new Date(lunarDate);
 
-  const year = inputDate.getFullYear(); 
+  const year = inputDate.getFullYear();
 
-  const month = inputDate.getMonth() + 1; 
+  const month = inputDate.getMonth() + 1;
 
   const day = inputDate.getDate();
   console.log({
@@ -903,7 +903,7 @@ function CalculateFromLunarToSolar(event) {
   const dayOfWeek = dayNames[date.getDay()];
 
   // Crea la stringa nel formato richiesto
-  let dateString = `양력 ${calendarData.cYear}년 ${calendarData.cMonth} 월  ${calendarData.cDay}일 (${dayOfWeek})`;
+  let dateString = `양력 <span class = "red">  ${calendarData.cYear}년 ${calendarData.cMonth} 월  ${calendarData.cDay}일 (${calendarData.ncWeek}) </span><br>${calendarData.gzDay} ${calendarData.gzMonth} ${calendarData.gzYear}`;
   console.log(calendarData);
   if (calendarData === -1) {
     dateString = "input not valid";
