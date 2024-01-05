@@ -906,7 +906,7 @@ function CalculateFromLunarToSolar(event) {
   let dateString = `양력 <span class = "red">  ${calendarData.cYear}년 ${calendarData.cMonth} 월  ${calendarData.cDay}일 (${calendarData.ncWeek}) </span><br>${calendarData.gzDay} ${calendarData.gzMonth} ${calendarData.gzYear}`;
   console.log(calendarData);
   if (calendarData === -1) {
-    dateString = "input not valid";
+    dateString = "입력이 유효하지 않습니다";
   }
   document.getElementById("result").innerHTML = dateString;
 }

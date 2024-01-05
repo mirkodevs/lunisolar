@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lunar calendar conversion</title>
-    <link rel="icon" href = "STlogo.png"> 
+    <link rel="icon" href="STlogo.png">
     <style>
         fieldset {
             border: none;
@@ -19,10 +19,19 @@
             color: #FBF9F1;
             border: 1px solid #7FC7D9;
             border-radius: 6px;
-            padding: 5px 5px;
+            padding: 10px 15px;
             cursor: pointer;
         }
 
+
+input{
+    padding: 10px 15px;
+    margin-top: 1.3em;
+}
+h3{
+    font-size: 23px;
+    margin: 0;
+}
         .container {
 
             margin: 260px auto;
@@ -30,14 +39,20 @@
             display: flex;
             justify-content: center;
             flex-direction: column;
+            border: 2px solid #191919;
+            padding: 10px;
+            padding-top: 20px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         }
-.red{
+
+        .red {
 
 
-    color: #FF004D;
-}
+            color: #FF004D;
+        }
+
         #result {
-   margin: 10px 0;
+            margin: 10px 0;
         }
     </style>
 </head>
@@ -45,8 +60,6 @@
 <body>
     <section class="container">
         <h3>양음력 변환</h3>
-
-
         <form onsubmit="CalculateFromLunarToSolar(event)">
             <fieldset>
                 <label for="">
@@ -55,20 +68,10 @@
                 </label>
             </fieldset>
             <button>변환</button>
-
-
-
         </form>
         <div id="result">
-
         </div>
-
     </section>
-
-
-
-
-
     <script src="index.js"></script>
 </body>
 
